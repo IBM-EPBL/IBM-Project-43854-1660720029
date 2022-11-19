@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HDFC Bank</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<style type="text/css">
+  .col2{
+     background-image:url({{ url_for ('static', filename = 'back.png') }});
+     background-position: center;
+     background-repeat: no-repeat;
+  }
+</style>
+<body class="bg-dark">
+<!--Navbar-->
+
+<div class="bg-dark text-light p-2">
+  <h3 class="mt-2">
+    <img src="{{url_for('static', filename='robot.png')}}" align="middle" width="50px" height="50px" />&nbsp;&nbsp;HDFC Bank</h3>
+    <hr style="color: white;background-color: white;height: 2px;" />
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="bg-warning text-light p-4 ">
+        <h3 class="text-dark">Our Bank Services</h3>
+         <hr/>
+         <ol>
+           <li>Checking accounts</li>
+           <li>Savings accounts</li>
+           <li>Debit & credit cards</li>
+           <li>Digital Banking</li>
+         </ol>
+      </div><br/>
+      <div class="bg-warning text-light p-4">
+       <h3 class="text-dark">Loans</h3>
+       <hr/>
+       <ol>
+         <li>House Loan</li>
+         <li>Gold Loan</li>
+         <li>Topup Loan</li>
+         <li>Vehicle Loan</li>
+         <li>Student Loan</li>
+       </ol>
+      </div>
+    </div>
+    <div class="col-md-4 col2" style="border:2px solid white;border-radius: 40px;">
+      
+    </div>
+    <div class="col-md-3 bg-primary text-light ml-2 p-4">
+       <h3 class="text-dark">Features of Net banking</h3>
+     <hr/>
+     <ul>
+       <li>A secure and convenient method of banking</li>
+       <li>Password-protected banking system</li>
+       <li>Easy access to financial and non-financial banking products/services</li>
+       <li>Transfer funds online via NEFT, RTGS, IMPS anytime</li>
+       <li>Process bill payments quickly</li>
+       <li>Channelize or cancel automatic payments</li>
+     </ul>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "194645db-c1b0-4c82-8a00-416bde4eaf02", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "58ea46b1-9b1e-45dc-bdec-07b56e87e647", // The ID of your service instance.
+    onLoad: function(instance) { instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+<body>
+</html>
